@@ -10,7 +10,7 @@ class Devbox < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/pilat/devbox/releases/download/v0.1.2/devbox_0.1.2_Darwin_x86_64.tar.gz"
-      sha256 "e7844e0b6b05e12c8ed2554b57569203e9c88a3539ba6ff620698afba8e7823a"
+      sha256 "8a7f52b46f475f5befea824a40cb27e6db925cdcff9bb6ce2b00e3e787c8c89f"
 
       def install
         bin.install "devbox"
@@ -18,7 +18,7 @@ class Devbox < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/pilat/devbox/releases/download/v0.1.2/devbox_0.1.2_Darwin_arm64.tar.gz"
-      sha256 "0292eb200b31c762ca9885569e2f54c72ef9465246385d8d8dc1f1854d912ddb"
+      sha256 "16a8c5270374602fbdd7c112db7d434c6ad80da1b94ce9cea871616d654406c0"
 
       def install
         bin.install "devbox"
@@ -30,7 +30,7 @@ class Devbox < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/pilat/devbox/releases/download/v0.1.2/devbox_0.1.2_Linux_x86_64.tar.gz"
-        sha256 "f0443a6ba3a3786da373199f4c625841e455ea595525620af5a1e2c1edc56c56"
+        sha256 "8f989e08bf94d32147d164c882a24dd27adfc5509deff765d5c73d81f5f8e51c"
 
         def install
           bin.install "devbox"
@@ -40,7 +40,7 @@ class Devbox < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/pilat/devbox/releases/download/v0.1.2/devbox_0.1.2_Linux_arm64.tar.gz"
-        sha256 "301a49db8d2730388b7c5a4f93893a4e9d7d23ff86c1e51876ef0e0ade9c4496"
+        sha256 "aa581ca8ba86c999caeaf71ac3ce12136ead5a3e941ca6ead77c4995ee588335"
 
         def install
           bin.install "devbox"
