@@ -5,23 +5,32 @@
 class Devbox < Formula
   desc ""
   homepage ""
-  version "0.1.3"
+  version "0.1.4"
+  license "MIT"
+
+  depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pilat/devbox/releases/download/v0.1.3/devbox_0.1.3_Darwin_x86_64.tar.gz"
-      sha256 "a10cd51a4205dc71ea309f934081face567bd39089bb1956fa379e2bb121301d"
+      url "https://github.com/pilat/devbox/releases/download/v0.1.4/devbox_0.1.4_Darwin_x86_64.tar.gz"
+      sha256 "6981c698227181422c2d1150d567e627afe3766521b59199f81dfee00dc80c26"
 
       def install
         bin.install "devbox"
+        bash_completion.install "completions/devbox.bash" => "devbox"
+        zsh_completion.install "completions/devbox.zsh" => "_devbox"
+        fish_completion.install "completions/devbox.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pilat/devbox/releases/download/v0.1.3/devbox_0.1.3_Darwin_arm64.tar.gz"
-      sha256 "3513d8ba3a9cf3dc411f174c1988f123a90f398cda9145856ad243211bd9d768"
+      url "https://github.com/pilat/devbox/releases/download/v0.1.4/devbox_0.1.4_Darwin_arm64.tar.gz"
+      sha256 "b0ba7f8cdb4a6e95583329ef4e7faa4839fa602c49e60aeef0aae1c8359d0959"
 
       def install
         bin.install "devbox"
+        bash_completion.install "completions/devbox.bash" => "devbox"
+        zsh_completion.install "completions/devbox.zsh" => "_devbox"
+        fish_completion.install "completions/devbox.fish"
       end
     end
   end
@@ -29,21 +38,27 @@ class Devbox < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pilat/devbox/releases/download/v0.1.3/devbox_0.1.3_Linux_x86_64.tar.gz"
-        sha256 "725b293d4b1e904c4bf35a1cb375f45ef08bbe5872159604285ccb7f679111f9"
+        url "https://github.com/pilat/devbox/releases/download/v0.1.4/devbox_0.1.4_Linux_x86_64.tar.gz"
+        sha256 "fc14d7c432c9724de8e6e694f31ea2e1cba0400e37de2a92d1fecef345b716db"
 
         def install
           bin.install "devbox"
+          bash_completion.install "completions/devbox.bash" => "devbox"
+          zsh_completion.install "completions/devbox.zsh" => "_devbox"
+          fish_completion.install "completions/devbox.fish"
         end
       end
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pilat/devbox/releases/download/v0.1.3/devbox_0.1.3_Linux_arm64.tar.gz"
-        sha256 "bc659982e7e2ba8ee1a8e597fc8295a2ef7a778203256ffeda310a19115df0c3"
+        url "https://github.com/pilat/devbox/releases/download/v0.1.4/devbox_0.1.4_Linux_arm64.tar.gz"
+        sha256 "bac31d4c179be89ea6e532e9a908e5932e4b0821f5ad1050c0f2858054cdf985"
 
         def install
           bin.install "devbox"
+          bash_completion.install "completions/devbox.bash" => "devbox"
+          zsh_completion.install "completions/devbox.zsh" => "_devbox"
+          fish_completion.install "completions/devbox.fish"
         end
       end
     end
