@@ -5,20 +5,20 @@
 class Devbox < Formula
   desc ""
   homepage ""
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pilat/devbox/releases/download/v0.1.2/devbox_0.1.2_Darwin_x86_64.tar.gz"
-      sha256 "8a7f52b46f475f5befea824a40cb27e6db925cdcff9bb6ce2b00e3e787c8c89f"
+      url "https://github.com/pilat/devbox/releases/download/v0.1.3/devbox_0.1.3_Darwin_x86_64.tar.gz"
+      sha256 "a10cd51a4205dc71ea309f934081face567bd39089bb1956fa379e2bb121301d"
 
       def install
         bin.install "devbox"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pilat/devbox/releases/download/v0.1.2/devbox_0.1.2_Darwin_arm64.tar.gz"
-      sha256 "16a8c5270374602fbdd7c112db7d434c6ad80da1b94ce9cea871616d654406c0"
+      url "https://github.com/pilat/devbox/releases/download/v0.1.3/devbox_0.1.3_Darwin_arm64.tar.gz"
+      sha256 "3513d8ba3a9cf3dc411f174c1988f123a90f398cda9145856ad243211bd9d768"
 
       def install
         bin.install "devbox"
@@ -29,8 +29,8 @@ class Devbox < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pilat/devbox/releases/download/v0.1.2/devbox_0.1.2_Linux_x86_64.tar.gz"
-        sha256 "8f989e08bf94d32147d164c882a24dd27adfc5509deff765d5c73d81f5f8e51c"
+        url "https://github.com/pilat/devbox/releases/download/v0.1.3/devbox_0.1.3_Linux_x86_64.tar.gz"
+        sha256 "725b293d4b1e904c4bf35a1cb375f45ef08bbe5872159604285ccb7f679111f9"
 
         def install
           bin.install "devbox"
@@ -39,8 +39,8 @@ class Devbox < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pilat/devbox/releases/download/v0.1.2/devbox_0.1.2_Linux_arm64.tar.gz"
-        sha256 "aa581ca8ba86c999caeaf71ac3ce12136ead5a3e941ca6ead77c4995ee588335"
+        url "https://github.com/pilat/devbox/releases/download/v0.1.3/devbox_0.1.3_Linux_arm64.tar.gz"
+        sha256 "bc659982e7e2ba8ee1a8e597fc8295a2ef7a778203256ffeda310a19115df0c3"
 
         def install
           bin.install "devbox"
