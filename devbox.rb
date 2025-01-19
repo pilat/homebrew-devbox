@@ -5,15 +5,15 @@
 class Devbox < Formula
   desc ""
   homepage ""
-  version "0.1.14"
+  version "0.1.15"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pilat/devbox/releases/download/v0.1.14/devbox_0.1.14_Darwin_x86_64.tar.gz"
-      sha256 "fb39a0d00f183c3ce4606856cc078e8f1ecbd447b3caffa5a3ade19a0b0e5809"
+      url "https://github.com/pilat/devbox/releases/download/v0.1.15/devbox_0.1.15_Darwin_x86_64.tar.gz"
+      sha256 "d5ef396e12fb2c3854ce78e0948d4f56bf5ab4de237dba473bd4107b9dfd6ed3"
 
       def install
         bin.install "devbox"
@@ -23,8 +23,8 @@ class Devbox < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pilat/devbox/releases/download/v0.1.14/devbox_0.1.14_Darwin_arm64.tar.gz"
-      sha256 "41c60efcefbee6ed6820a2d9a84bb280ba11f6e8a6dbcb06dc7ed6b958da6212"
+      url "https://github.com/pilat/devbox/releases/download/v0.1.15/devbox_0.1.15_Darwin_arm64.tar.gz"
+      sha256 "ad331f7af8065d89617322a698903030a462182a602137e01258ae7fd23bd01f"
 
       def install
         bin.install "devbox"
@@ -38,8 +38,8 @@ class Devbox < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pilat/devbox/releases/download/v0.1.14/devbox_0.1.14_Linux_x86_64.tar.gz"
-        sha256 "30c99a6b6b86d670d928008cc908c1e87aeec572d5e2ab192e164fa3a30ddab5"
+        url "https://github.com/pilat/devbox/releases/download/v0.1.15/devbox_0.1.15_Linux_x86_64.tar.gz"
+        sha256 "2edcfc4dcacf13b60cf028bd2eb7428a5042a30ede5504d6e4a07052c9253279"
 
         def install
           bin.install "devbox"
@@ -51,8 +51,8 @@ class Devbox < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pilat/devbox/releases/download/v0.1.14/devbox_0.1.14_Linux_arm64.tar.gz"
-        sha256 "648237963e7d4523d6ca0b3fc52206ecc1ccaf6cd24113e2380337d8159c10d8"
+        url "https://github.com/pilat/devbox/releases/download/v0.1.15/devbox_0.1.15_Linux_arm64.tar.gz"
+        sha256 "834e15a8fab1dff5784fed782986dd71ba86e6937e0ce8e2bd4400ef12539bad"
 
         def install
           bin.install "devbox"
