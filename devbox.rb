@@ -5,15 +5,15 @@
 class Devbox < Formula
   desc ""
   homepage ""
-  version "0.1.26"
+  version "0.1.27"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pilat/devbox/releases/download/v0.1.26/devbox_0.1.26_Darwin_x86_64.tar.gz"
-      sha256 "71c0b2b370295b889ed1fdb9832a3047c1520a08136c96f2f631478cc2231e2f"
+      url "https://github.com/pilat/devbox/releases/download/v0.1.27/devbox_0.1.27_Darwin_x86_64.tar.gz"
+      sha256 "3580e3d2b00b817d5e98fd8f5f38cee667b76b5ba43ecd5bc17cd8f0a949ab79"
 
       define_method(:install) do
         bin.install "devbox"
@@ -23,8 +23,8 @@ class Devbox < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pilat/devbox/releases/download/v0.1.26/devbox_0.1.26_Darwin_arm64.tar.gz"
-      sha256 "6173ed42bfe269887846862a52458122ccd1e895e8606e969fe2a002df1e75d9"
+      url "https://github.com/pilat/devbox/releases/download/v0.1.27/devbox_0.1.27_Darwin_arm64.tar.gz"
+      sha256 "d79f134bba22b883e84fd4abd69fc6e8b0bb68268a69df3ead8ba6dc9a2c6ca1"
 
       define_method(:install) do
         bin.install "devbox"
@@ -37,8 +37,8 @@ class Devbox < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pilat/devbox/releases/download/v0.1.26/devbox_0.1.26_Linux_x86_64.tar.gz"
-      sha256 "a8049a7606ea671f5a4a977ded876cc672fc6fe481aaec029ebdf8d1119ff735"
+      url "https://github.com/pilat/devbox/releases/download/v0.1.27/devbox_0.1.27_Linux_x86_64.tar.gz"
+      sha256 "7191b9e4a6f71432735d333f9f2e6dad4c569ade7dfdd600f090786f1e4449f1"
       define_method(:install) do
         bin.install "devbox"
         bash_completion.install "completions/devbox.bash" => "devbox"
@@ -47,8 +47,8 @@ class Devbox < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pilat/devbox/releases/download/v0.1.26/devbox_0.1.26_Linux_arm64.tar.gz"
-      sha256 "c21165270c7ad37f8b6f513ccb9447e5bef53b64497d72bbdb6bb5d1fda3c6fe"
+      url "https://github.com/pilat/devbox/releases/download/v0.1.27/devbox_0.1.27_Linux_arm64.tar.gz"
+      sha256 "893a43ba7b12d4dae2d83edecb7f8337420d84eaf02024bdb201aeb7c24798dc"
       define_method(:install) do
         bin.install "devbox"
         bash_completion.install "completions/devbox.bash" => "devbox"
